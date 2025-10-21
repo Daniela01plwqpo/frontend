@@ -5,15 +5,20 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+     "test": "vitest",
     "build": "vite build",
     "preview": "vite preview"
+  
   },
   "dependencies": {
     "vue": "^3.5.21"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
-    "vite": "npm:rolldown-vite@7.1.12"
+    "@vue/test-utils": "^2.4.6",
+    "jsdom": "^27.0.0",
+    "vite": "npm:rolldown-vite@7.1.12",
+    "vitest": "^3.2.4"
   },
   "overrides": {
     "vite": "npm:rolldown-vite@7.1.12"

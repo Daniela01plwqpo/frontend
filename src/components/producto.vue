@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Gestión de Productos</h1>
+  
 
     <form @submit.prevent="agregarProducto" class="form">
       <input v-model="nombre" type="text" placeholder="Nombre del producto" required />
@@ -13,14 +13,13 @@
     <table v-if="productos.length > 0">
       <thead>
         <tr>
-          <th>ID</th>
+          
           <th>Nombre</th>
           <th>Precio</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="p in productos" :key="p.id_producto">
-          <td>{{ p.id_producto }}</td>
           <td>{{ p.nombre }}</td>
           <td>{{ parseFloat(p.precio).toFixed(2) }}</td>
         </tr>
@@ -33,7 +32,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-// Cambia esta URL si usas Railway
+
 const apiUrl = 'http://localhost:3000/api/productos'
 
 const productos = ref([])
@@ -41,7 +40,7 @@ const nombre = ref('')
 const precio = ref('')
 const mensaje = ref('')
 
-// Cargar productos
+
 async function cargarProductos() {
   try {
     const res = await fetch(apiUrl)
@@ -55,7 +54,7 @@ async function cargarProductos() {
   }
 }
 
-// Agregar producto
+
 async function agregarProducto() {
   if (!nombre.value || !precio.value) {
     mensaje.value = 'Debes ingresar nombre y precio'
@@ -135,10 +134,11 @@ th, td {
   border: 1px solid #ccc;
   padding: 8px;
   text-align: center;
+  color: black;
 }
 
 th {
   background-color: #3074c1;
-  color: white;
+  color: rgb(3, 2, 2);
 }
 </style>

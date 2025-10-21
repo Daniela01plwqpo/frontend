@@ -7,10 +7,7 @@
     <h1>Mi Proyecto Vue</h1>
     <p>Este es un componente Proyecto conectado coll</p>
 
-    <!-- Usando el componente HelloWorld -->
-    <!-- <HelloWorld msg="Bienvenido a Mi Proyecto" /> -->
-    
-    <!-- Puedes agregar más contenido o componentes aquí -->
+  
   </div>
 </template>
 
